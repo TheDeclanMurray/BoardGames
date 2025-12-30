@@ -75,58 +75,58 @@ def observePlay(me):
 
 
 if __name__ == "__main__":
-    # numPlayers = int(input("Number of Players: "))
-    # board = Board(numPlayers)
-    # name = input("Enter your name: ")
-    # numMyCards = int(input("Number of Cards: "))
-    # board.playerNames[0] = name
-    # board.numCards[0] = numMyCards
-
-    # for i in range(numPlayers-1):
-    #     name = input("Enter new player name: ")
-    #     numCards = int(input("Number of Cards: "))
-    #     board.playerNames[i+1] = name
-    #     board.numCards[i+1] = numCards
-
-    # board.printBoard()
-
-    # isRunning = True
-
-    # myCards = []
-    # for i in range(numMyCards):
-    #     hasCard = False
-    #     while not hasCard:
-    #         card = input("New Card: ")
-    #         if not board.isCard(card):
-    #             print(f"{card} not a card")
-    #             continue
-
-    #         myCards.append(card)
-    #         hasCard = True
-
-    # 
-
-    numPlayers = 3
+    numPlayers = int(input("Number of Players: "))
     board = Board(numPlayers)
-    board.playerNames[0] = "Declan"
-    board.numCards[0] = 6
-    board.playerNames[1] = "Phelan"
-    board.numCards[1] = 6
-    board.playerNames[2] = "Kieran"
-    board.numCards[2] = 6
-    
-    numMyCards = 3
-    MyCards = [
-        "Mrs. Peacock",
-        "Colonel Mustard",
-        "Lead Pipe",
-        "Kitchen",
-        "Ballroom",
-        "Conservatory"
-    ]
+    name = input("Enter your name: ")
+    numMyCards = int(input("Number of Cards: "))
+    board.playerNames[0] = name
+    board.numCards[0] = numMyCards
 
-    # Keep
-    board.myCards(MyCards)
+    for i in range(numPlayers-1):
+        name = input("Enter new player name: ")
+        numCards = int(input("Number of Cards: "))
+        board.playerNames[i+1] = name
+        board.numCards[i+1] = numCards
+
+    board.printBoard()
+
+    isRunning = True
+
+    myCards = []
+    for i in range(numMyCards):
+        hasCard = False
+        while not hasCard:
+            card = input("New Card: ")
+            if not board.isCard(card):
+                print(f"{card} not a card")
+                continue
+
+            myCards.append(card)
+            hasCard = True
+
+    board.myCards(myCards)
+
+
+    # numPlayers = 3
+    # board = Board(numPlayers)
+    # board.playerNames[0] = "Declan"
+    # board.numCards[0] = 6
+    # board.playerNames[1] = "Phelan"
+    # board.numCards[1] = 6
+    # board.playerNames[2] = "Kieran"
+    # board.numCards[2] = 6
+    
+    # numMyCards = 3
+    # MyCards = [
+    #     "Mrs. Peacock",
+    #     "Colonel Mustard",
+    #     "Lead Pipe",
+    #     "Kitchen",
+    #     "Ballroom",
+    #     "Conservatory"
+    # ]
+
+    # board.myCards(MyCards)
 
     # board.observePlay(1, "Mr. Green", "Knife", "Billiard Room", True)
     # board.observePlay(1, "Mr. Green", "Wrench", "Study", True)
@@ -137,8 +137,6 @@ if __name__ == "__main__":
     # board.observePlay(1, "Miss Scarlet", "Knife", "Hall", False)
     # board.observePlay(1, "Professor Plum", "Wrench", "Study", False)
     # board.observePlay(1, "Mrs. White", "Revolver", "Billiard Room", False)
-
-
 
     while not board.isGameOver:
         # get current player
